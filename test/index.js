@@ -1,0 +1,25 @@
+/*
+  test that contract seeds with initial accounts
+  test that contract seeds with initial moderators
+
+  test that owner can add an address
+  test that owner can remove an address
+
+  test that owner can add a moderator
+  test that owner can remove a moderator
+
+  test that moderator can add an address
+  test that moderator can remove an address
+
+  test for throw when moderator tries to add a moderator
+  test for throw when moderator tries to remove a moderator
+
+  test for throw when owner adds an already added address
+  test for throw when owner removes a nonexistant address
+
+  test for throw when owner adds an already added moderator
+  test for throw when owner removes a nonexistant moderator
+
+  test for throw when moderator adds an already added address
+  test for throw when moderator removes a nonexistant address
+*/
