@@ -1,13 +1,13 @@
 pragma solidity 0.4.18;
 import "./Moderated.sol";
-import "./AddressList.sol";
+import "./LibAddressList.sol";
 
 
 contract AccountList is Moderated {
   /* Storage vars
   ** ********************** */
-  using AddressList for AddressList.Data;
-  AddressList.Data internal accountData;
+  using LibAddressList for LibAddressList.Data;
+  LibAddressList.Data internal accountData;
 
   /* Modifiers
   ** ********************** */

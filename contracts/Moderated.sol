@@ -1,13 +1,13 @@
 pragma solidity 0.4.18;
-import "./AddressList.sol";
+import "./LibAddressList.sol";
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
 
 contract Moderated is Ownable {
   /* Storage vars
   ** ********************** */
-  using AddressList for AddressList.Data;
-  AddressList.Data internal moderatorData;
+  using LibAddressList for LibAddressList.Data;
+  LibAddressList.Data internal moderatorData;
 
   /* Modifiers
   ** ********************** */
