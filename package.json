@@ -1,7 +1,7 @@
 {
   "name": "solidity-moderated-account-list",
   "version": "1.0.0",
-  "description": "Smart contract for a moderated account list.",
+  "description": "Smart contract(s) for a moderated account list.",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
