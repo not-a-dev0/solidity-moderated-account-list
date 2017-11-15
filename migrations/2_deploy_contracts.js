@@ -1,13 +1,13 @@
 var Moderated = artifacts.require("./Moderated.sol");
-var WhiteList = artifacts.require("./WhiteList.sol");
+var AccountList = artifacts.require("./AccountList.sol");
 var AddressList = artifacts.require("./AddressList.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(AddressList);
-  deployer.link(AddressList, [Moderated, WhiteList]);
+  deployer.link(AddressList, [Moderated, AccountList]);
 
   deployer.deploy(Moderated);
-  deployer.link(Moderated, WhiteList);
+  deployer.link(Moderated, AccountList);
 
-  deployer.deploy(WhiteList);
+  deployer.deploy(AccountList);
 }

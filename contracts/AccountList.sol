@@ -3,11 +3,18 @@ import "./Moderated.sol";
 import "./AddressList.sol";
 
 
-contract WhiteList is Moderated {
+contract AccountList is Moderated {
   /* Storage vars
   ** ********************** */
   using AddressList for AddressList.Data;
   AddressList.Data internal accountData;
+
+  /* Modifiers
+  ** ********************** */
+  modifier onlyAccount {
+    require(accountData.contains(msg.sender));
+    _;
+  }
 
   /* Event loggers
   ** ********************** */
@@ -16,7 +23,7 @@ contract WhiteList is Moderated {
 
   /* Constructor
   ** ********************** */
-  function WhiteList(address[] initialAccounts, address[] initialMods)
+  function AccountList(address[] initialAccounts, address[] initialMods)
     public
     Moderated(initialMods)
   {
